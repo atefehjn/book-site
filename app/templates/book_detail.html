@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="project-info-box mt-0">
+                    <h5 class="display-5 description-header-font">{{book.name}} Book Description</h5>
+                    <p class="mb-0 text-justify1 description-font">{{book.description}}</p>
+                </div>
+                <div class="project-info-box">
+                    <p class="description-font"><b>Author: </b> {{book.author }}</p>
+                    <p class="description-font"><b>Year of publish: </b>{{book.year_of_publish}}</p>
+                    <p class="description-font"><b>Pages: </b>{{book.pages}}</p>
+                    <p class="description-font"><b>Genre: </b> {{book.genre}}</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class = "d-flex justify-content-center align-items-center">
+                    <img class='detail-image rounded'src="{{ url_for('static', filename=book['img-addr'])}}" alt="detail image">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

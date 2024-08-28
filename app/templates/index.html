@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/material-icon/css/material-design-iconic-font.min.css') }}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="main1">
+        <!-- Sign up form -->
+        <section class="signup1">
+            <div class="container1">
+                <div class="signup-content1">
+                    <div class="signup-form1">
+                        <div>
+                            <h3 class="h4 mb-3 text-justify1">Welcome to BookVoyage</h3>
+                            <h3 class=" h5 mb-3 text-muted text-justify1">Navigate Your Next Great Read.</h3>    
+                            <p class="mb-3 text-justify1">BookVoyage is your personalized book recommendation platform, guiding you to discover books that perfectly match your taste. Whether you're setting sail for new genres or finding a cozy read, BookVoyage helps you explore literary worlds tailored just for you.</p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <a href="{{ url_for('main.register') }}" class="btn btn-primary btn-md flex-fill mx-1">Sign Up</a>
+                            <a href="{{ url_for('main.signin') }}" class="btn btn-secondary btn-md flex-fill mx-1">Sign In</a>
+                        </div>                        
+                            
+                    </div>
+                    <div class="signup-image1 d-flex justify-content-center align-items-center"">
+                        <figure><img src='{{ url_for('static', filename='images/focused-tiny-people-reading-books(1).png') }}' alt="sing up image"></figure>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </div>
+</body>
+</html>
